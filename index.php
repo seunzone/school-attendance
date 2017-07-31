@@ -14,26 +14,26 @@
 	<div class="myDiv" align="center">
 
 
-	<?php echo date('d/m/Y'); ?> <br>
+	<div class="list">
+	<h3> Student ID &nbsp  Time in</h3>
+	<?php 
+		require"logics/functions.php";
+		attendance_list();
+	?>
+	<br>
+	</div>
+
+	<?php echo date('l F o'); ?> <br>
 	<img src="logo.png">
 		<h1>Akunne's Community High School</h1>
-			<form action="checkintime.php">
+			<form action="logics/store_time.php" method="POST">
 				<labeL>Enter Your School ID</labeL> <br><br>
-				<input name="schoolId" id="swag" placeholder="enter your school ID" type="text">
-				<br><br>
+				<input name="school_id" id="swag" placeholder="enter your school ID" type="text">
 				
-				<labeL>Checkin Time</labeL><br><br>
-				<input type="number" name="timeHour"> <input type="number" name="timeMinute">
-									<select " name="time>
-		        						<option value="Am">Am</option>
-		        						<option value="Pm">Pm</option>
-		        						
-		        					</select>
-				<br><br>
+				
 				<br><br>
 
-
-				<button id="myBtn">Check In</button>
+				<input type="submit" value="Check in" id="myBtn" >
 			</form>
 		<hr>
 			
